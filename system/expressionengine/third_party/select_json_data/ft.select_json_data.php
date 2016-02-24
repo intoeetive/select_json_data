@@ -218,6 +218,10 @@ class Select_json_data_ft extends EE_Fieldtype {
 
     function save($data)
 	{
+        if (!is_array($data))
+        {
+            $data = array($data);
+        }
         $save = array(
             'data'  => $data
         );
